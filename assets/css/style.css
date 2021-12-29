@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 html{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 62.5%;
 }
 .header
@@ -15,6 +15,11 @@ html{
     color: #fff;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 .navbar
 {
@@ -25,12 +30,13 @@ html{
 .navbar-item
 {
     display: inline-block;
-    padding: 0px 16px;
+    padding: 0px 18px;
     margin-left: -5px;
 }
 .navbar-item:hover{
     background-color: #fff;
     color: #000;
+    cursor: pointer;
 }
 .item-color
 {
@@ -66,6 +72,7 @@ html{
     list-style: none;
     width: 162px;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    z-index: 9;
 
 }
 
@@ -89,4 +96,338 @@ html{
 .search:hover
 {
     background-color: #009688;
+    cursor: pointer;
+}
+.banner
+{
+    margin-top: 40px;
+    position: relative;
+}
+.banner-img img
+{
+    width: 100%;
+    max-height: 86vh;
+    vertical-align: middle;
+}
+.banner-learn
+{
+    font-size: 2.4rem;
+    color: #fff;
+    background-color: #000;
+    padding: 12px 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.banner-learn:hover{
+    background-color: #009688;
+    cursor: pointer;
+}
+.modal{
+    position: fixed;
+    top: 100px;
+    right: 224px;
+    left: 224px;
+    bottom: 366px;
+    display: none;
+    animation: fadeIn ease 0.3s;
+}
+.overlay
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: none;
+}
+
+@keyframes fadeIn
+{
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#modal-check:checked ~ .modal,
+#modal-check:checked ~ .overlay
+{
+    display: block;
+}
+.modal-header{
+    padding: 16px 16px;
+    background-color: #009688;
+    color: #fff;
+}
+.header1{
+    font-size:1.8rem;
+}
+.header2{
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+.modal-body{
+    padding: 16px 16px;
+    background-color: #fff;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 200;
+}
+.modal-body a{
+    color: #009688;
+}
+.modal-footer{
+    padding: 16px 16px;
+    background-color: #009688;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.modal-exit
+{
+    padding: 12px 14px;
+    color: #fff;
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 1.4rem;
+}
+.modal-exit:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.ourteam{
+    padding: 86px 0;
+    text-align: center;
+}
+.ourteam-heading
+{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.ourteam p{
+    font-size: 1.6rem;
+    letter-spacing: 2;
+}
+.ourteam-img
+{
+    margin-top: 40px;
+}
+.ourteam-img-item:hover
+{
+    
+}
+.ourteam-avatar img
+{
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+}
+.ourteam-avatar img:hover{
+    opacity: 0.6;
+}
+.ourteam-name
+{
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.ourteam-job
+{
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+
+.ourwork
+{
+    background-color: #333;
+    padding: 64px 16px;
+    position: relative;
+    margin: 0;
+}
+.ourwork-heading
+{
+    color: #fff;
+    font-size: 3.2rem;
+    margin-top: 20px;
+}
+.ourwork-text p
+{
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.4;
+    margin-top: 30px;
+    text-align: justify;
+}
+.item-img img{
+    width: 100%;
+}
+.item-customer
+{
+    background-color: #fff;
+    margin-top: -5px;
+    padding: 16px;
+}
+.customer-heading
+{
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+.customer-heading2
+{
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.customer-item
+{
+    font-size: 1.6rem;
+    line-height: 40px;
+}
+.ourwork-plus
+{
+    width: 50px;
+    height: 50px;
+    background-color: #009688;
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 40px;
+    bottom: -24px;
+}
+.ourwork-plus:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.nav-plus
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px 18px;
+    z-index: 100;
+    display: none;
+    animation: nav ease .4s;
+}
+
+@keyframes nav 
+{
+    from
+    {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.nav-plus-close
+{
+    font-size: 3.6rem;
+    color: #009688;
+    cursor: pointer;
+}
+.nav-plus-close i{
+    margin-left: 20px;
+}
+.nav-plus-item
+{
+    padding-top: 16px;
+    font-size: 2.4rem;
+    cursor: pointer;
+    margin-top: 30px;
+}
+#nav-plus-check:checked ~ .nav-plus,
+#nav-plus-check:checked ~ .overlay
+{
+    display: block;
+}
+
+.over
+{
+    margin: 40px 0 0 0;
+}
+.pricing-item{
+    margin: 0;
+}
+.pricing-item:hover
+{
+
+}
+.pricing-title{
+    background-color: #000;
+    text-align: center;
+    font-size: 2.8rem;
+    color: #fff;
+    padding: 30px 0;
+}
+.pricing-gb{
+    padding: 20px 0;
+    text-align: center;
+    list-style: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.6rem;
+    display: block;
+
+}
+.dollar
+{
+    font-size: 2.4rem;
+    display: inline-block;
+}
+.pricing-gb i{
+    font-size: 3.2rem;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: 500;
+}
+.pricing-gb span
+{
+    font-size: 3rem;
+}
+.pricing-gb p{
+    color: #666;
+    margin-top: 20px;
+}
+.pricing-signup
+{
+    padding: 10px 20px;
+    background-color: #009688;
+    display: inline-block;
+    color: #fff;
+}
+.sign{
+    padding: 24px 0;
+    background-color: #f1f1f1;
+}
+.pricing-signup:hover
+{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.pricing-signup i{
+    font-size: 1.6rem;
+    margin-right: 5px;
+}
+.bgr{
+    background-color: #666;
 }
