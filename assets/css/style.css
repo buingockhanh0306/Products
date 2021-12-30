@@ -724,4 +724,8 @@ html{
         height: 84px;
         border-radius: 50%;
     }
+    .toTop-icon:hover ~ .goto-top
+    {
+        display: none;
+    }
 }
