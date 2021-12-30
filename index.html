@@ -13,23 +13,36 @@
 <body>
     <header class="header">
         <div class="navbar">
-            <ul class="navbar-item item-color"><div class="logo-item"><i class="fas fa-home"></i></div>Logo</ul>
-            <ul class="navbar-item">Team</ul>
-            <ul class="navbar-item">Work</ul>
-            <ul class="navbar-item">Price</ul>
-            <ul class="navbar-item">Contacts</ul>
-            <ul class="navbar-item drop">Dropdown 
+            <a href="#" class="navbar-item item-color"><div class="logo-item"><i class="fas fa-home"></i></div>Logo</a>
+            <a href="#team" class="mobile navbar-item">Team</a>
+            <a href="#work" class="mobile navbar-item">Work</a>
+            <a href="#price" class="mobile navbar-item">Price</a>
+            <a href="#contact" class="mobile navbar-item">Contacts</a>
+            <a href="" class=" mobile navbar-item drop">Dropdown 
                 <i class="fas fa-caret-down"></i>
             <div class="navbar-item_down">
                 <li class="nav-link">Link 1</li>
                 <li class="nav-link">Link 2</li>
                 <li class="nav-link">Link 3</li>
             </div>
-            </ul>
+            </a>
         </div>
         <div class="search">
             <i class="fas fa-search"></i>
         </div>
+
+        <label for="open-nav-mobile" class="nav-mobile">
+            <input hidden id="open-nav-mobile" type="checkbox">
+            <label for="open-nav-mobile" class="overlay"></label>
+            <i class="fas fa-bars"></i>
+            <div class="nav-mobile-menu">
+                <div class="menu-item"><a href="">Team</a></div>
+                <div class="menu-item"><a href="">Work</a></div>
+                <div class="menu-item"><a href="">Price</a></div>
+                <div class="menu-item"><a href="">Contact</a></div>
+                <div class="menu-item"><a href="">Search</a></div>
+            </div>
+        </label>
     </header>
 
 
@@ -54,29 +67,30 @@
         </div>
     </div>
 
-    <div class="ourteam">
+
+    <div id="team" class="ourteam">
         <h1 class="ourteam-heading">OUR TEAM</h1>
         <p>Meet the team - our office rats:</p>
             <div class="row no-gutters ourteam-img">
-                <div class="col l-3 ourteam-img-item">
+                <div class="col l-3 m-3 c-12 ourteam-img-item">
                     <div class="ourteam-avatar"><img src="assets/images/avatar.jpg" alt=""></div>
                     <h3 class="ourteam-name">Johnny Walker</h3>
                     <div class="ourteam-job">Web Designer</div>
                 </div>
     
-                <div class="col l-3 ourteam-img-item">
+                <div class="col l-3 m-3 c-12 ourteam-img-item">
                     <div class="ourteam-avatar"><img src="assets/images/avatar.jpg" alt=""></div>
                     <h3 class="ourteam-name">Rebecca Flex</h3>
                     <div class="ourteam-job">Support</div>
                 </div>
     
-                <div class="col l-3 ourteam-img-item">
+                <div class="col l-3 m-3 c-12 ourteam-img-item">
                     <div class="ourteam-avatar"><img src="assets/images/avatar.jpg" alt=""></div>
                     <h3 class="ourteam-name">Jan Ringo</h3>
                     <div class="ourteam-job">Boss man</div>
                 </div>
     
-                <div class="col l-3 ourteam-img-item">
+                <div class="col l-3 m-3 c-12 ourteam-img-item">
                     <div class="ourteam-avatar"><img src="assets/images/avatar.jpg" alt=""></div>
                     <h3 class="ourteam-name">Kai Ringo</h3>
                     <div class="ourteam-job">Fixer</div>
@@ -84,8 +98,9 @@
             </div>       
     </div>
 
-    <div class="row ourwork">
-        <div class="col l-3 ourwork-text">
+
+    <div id="work" class="row ourwork">
+        <div class="col l-3 m-3 c-12 ourwork-text">
             <div class="ourwork-heading">Our Work</div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -95,7 +110,7 @@
                 pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
                 officia deserunt mollit anim id est laborum.</p>
         </div>
-        <div class="col l-3 ourwork-item">
+        <div class="col l-3 m-3 c-12 ourwork-item">
             <div class="item-img"><img src="assets/images/snow.jpg" alt=""></div>
             <div class="item-customer">
                 <p class="customer-heading">Customer 1</p>
@@ -107,7 +122,7 @@
             </div>
         </div>
 
-        <div class="col l-3 ourwork-item">
+        <div class="col l-3 m-3 c-12 ourwork-item">
             <div class="item-img"><img src="assets/images/lights.jpg" alt=""></div>
             <div class="item-customer">
                 <p class="customer-heading">Customer 2</p>
@@ -119,7 +134,7 @@
             </div>
         </div>
 
-        <div class="col l-3 ourwork-item">
+        <div class="col l-3 m-3 c-12 ourwork-item">
             <div class="item-img"><img src="assets/images/mountains.jpg" alt=""></div>
             <div class="item-customer">
                 <p class="customer-heading">Customer 3</p>
@@ -144,11 +159,12 @@
         </div>
     </div>
 
-    <div class="pricing ourteam">
+
+    <div id="price" class="pricing ourteam">
         <h1 class="ourteam-heading">PRICING</h1>
         <p>Choose a pricing plan that fits your needs.</p>
         <div class="row over">
-            <div class="col l-4">
+            <div class="col l-4 m-4 c-12">
                 <div class="pricing-item">
                     <div class="pricing-title">Basic</div>
                     <li class="pricing-gb"><b>10GB</b> Storage</li>
@@ -169,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="col l-4">
+            <div class="col l-4 m-4 c-12">
                 <div class="pricing-item">
                     <div class="pricing-title bgr">Pro</div>
                     <li class="pricing-gb"><b>25GB</b> Storage</li>
@@ -190,7 +206,7 @@
                 </div>
             </div>
 
-            <div class="col l-4">
+            <div class="col l-4 m-4 c-12">
                 <div class="pricing-item">
                     <div class="pricing-title">Premium</div>
                     <li class="pricing-gb"><b>50GB</b> Storage</li>
@@ -213,27 +229,63 @@
         </div>
     </div>
 
-    <div class="contact">
+
+    <div id="contact" class="contact">
             <div class="row">
-                <div class="col l-5">
+                <div class="col l-5 m-5 c-12">
                     <div class="contact-title">Contact Us</div>
                     <p class="contact-add">Address</p>
                     <p class="swing">Swing by for a cup of coffee, or whatever.</p>
                     <div class="contact-item"><i class="fas fa-map-marker-alt"></i>Chicago, US</div>
-                    <div class="contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0975640181">+00 1515151515</a></div>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i>+00 1515151515</div>
                     <div class="contact-item"><i class="far fa-envelope"></i></i>buikhanhi2k@gmail.com</div>
                 </div>
     
-                <div class="col l-7">
+                <div class="col l-7 m-7 c-12">
                     <form action="" class="form">
                         <div class="form-item">
                             <label for="">Name</label>
-                            <input class="form-item-input" type="text">
+                            <input required class="form-item-input" type="text">
+                        </div>
+
+                        <div class="form-item">
+                            <label for="">Email</label>
+                            <input required class="form-item-input" type="text">
+                        </div>
+
+                        <div class="form-item">
+                            <label for="">Message</label>
+                            <input required class="form-item-input" type="text">
+                        </div>
+
+                        <div class="form-item item-flex">
+                            <div><input checked class="form-item-checkbox" type="checkbox"><label for="">I Like it!</label></div>
+                            <input class="form-item-submit" type="submit" value="Send">
                         </div>
                     </form>
                 </div>
             </div>
     </div>
+
+    <div class="banner-footer">
+        <img src="assets/images/map.jpg" alt="">
+    </div>
+
+    <footer class="footer">
+        <p class="follow">Follow Us</p>
+        <div class="social">
+            <div class="social-item"><i class="fab fa-facebook-f"></i></div>
+            <div class="social-item"><i class="fab fa-twitter"></i></div>
+            <div class="social-item"><i class="fab fa-google-plus-g"></i></div>
+            <div class="social-item"><i class="fab fa-instagram"></i></div>
+            <div class="mobile social-item"><i class="fab fa-linkedin-in"></i></div>
+        </div>
+        <p class="footer-link">Powered by <a href="">w3.css</a></p>
+        <div class="toTop">
+            <a href="#" class="toTop-icon"><i class="fas fa-chevron-circle-up"></i></a>
+            <div class="goto-top">Go To Top</div>
+        </div>
+    </footer>
 
 
 

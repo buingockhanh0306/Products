@@ -7,6 +7,7 @@
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 .header
 {
@@ -23,9 +24,60 @@ html{
 }
 .navbar
 {
-    width: 50%;
+    width: 80%;
     font-size: 1.4rem;
     line-height: 40px;
+}
+.nav-mobile
+{
+    color: #fff;
+    padding: 0 16px;
+    line-height: 40px;
+    font-size: 1.4rem;
+    display: none;
+    position: relative;
+}
+.nav-mobile-menu
+{
+    position: absolute;
+    left: -314px;
+    right: 0;
+    background-color: #000;
+    display: none;
+}
+#open-nav-mobile:checked ~ .nav-mobile-menu,
+#open-nav-mobile:checked ~ .overlay
+{
+    display: block;
+}
+.menu-item{
+    line-height: 24px;
+    display: block;
+    padding: 8px 16px;
+}
+.menu-item:hover
+{
+    background-color: #ccc;
+}
+.menu-item:hover a{
+    color: #000;
+}
+.menu-item a{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-mobile-menu a:hover
+{
+    /* background-color: #ccc;
+    color: #000; */
+}
+.nav-mobile:hover{
+    background-color: #fff;
+    color: #000;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
 }
 .navbar-item
 {
@@ -303,7 +355,7 @@ html{
     align-items: center;
     border-radius: 50%;
     position: absolute;
-    right: 40px;
+    right: 30px;
     bottom: -24px;
 }
 .ourwork-plus:hover{
@@ -342,6 +394,11 @@ html{
     font-size: 3.6rem;
     color: #009688;
     cursor: pointer;
+    padding: 8px;
+    display: block;
+}
+.nav-plus-close:hover{
+    background-color: #ccc;
 }
 .nav-plus-close i{
     margin-left: 20px;
@@ -466,4 +523,205 @@ html{
     font-size: 1.8rem;
     width: 30px;
     line-height: 1.8;
+}
+
+.form{
+    background-color: #fff;
+    padding: 16px 16px;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+}
+.form-item{
+    margin-top: 16px;
+}
+.form-item label{
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-item-input{
+    display: block;
+    padding: 12px 8px;
+    font-size: 1.6rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+.form-item-checkbox
+{
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    position: relative;
+    bottom: -5px;
+}
+
+.item-flex
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-item-submit
+{
+    font-size: 1.6rem;
+    padding: 10px 18px;
+    background-color: #000;
+    color: #fff;
+    border:none;
+}
+.form-item-submit:hover{
+    background-color: #D5D5D5;
+    color: #000;
+    cursor: pointer;
+}
+.banner-footer{
+    width: 100%;
+}
+.banner-footer img{
+    width: 100%;
+}
+.footer{
+    background-color: #000;
+    color: #fff;
+    height: 264px;
+    text-align: center;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.follow{
+    font-size: 2.4rem;
+}
+.social{
+
+}
+.social-item
+{
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 12px 16px;
+    margin: 16px 2px;
+    background-color: #009688;
+}
+.social-item:hover
+{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.footer-link
+{
+    font-size: 1.5rem;
+}
+.footer-link a{
+    
+    color: #fff;
+}
+.toTop
+{
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    font-size: 2.6rem;
+}
+.toTop a{
+    color: #fff;
+}
+.toTop-icon
+{
+    padding: 6px 12px;
+}
+.toTop-icon:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.goto-top
+{
+    background-color: #009688;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 1.6rem;
+    position: absolute;
+    left: -118px;
+    top: 0px;
+    display: none;
+}
+.toTop-icon:hover ~ .goto-top
+{
+    display: block;
+}
+
+
+@media only screen and (max-width: 46.1875em)
+{
+  .mobile
+  {
+      display: none;
+  }
+  .search
+  {
+      display: none;
+  }
+  .nav-mobile
+  {
+      display: inline-block;
+  }
+  .modal{
+    top: 100px;
+    right: 16px;
+    left: 16px;
+    bottom: 60%;
+    animation: fadeIn ease 0.3s;
+    }
+    .ourteam-img-item
+    {
+        margin-top: 30px;
+    }
+    .ourteam-name
+    {
+        margin-top: 8px;
+    }
+    .ourteam-job
+    {
+        margin-top: 8px;
+    }
+    .ourwork-text
+    {
+        margin-bottom: 20px;
+    }
+    .pricing-item
+    {
+        margin-bottom: 20px;
+    }
+    .contact
+    {
+        margin-top: -20px;
+    }
+    .form{
+        margin-top: 16px;
+    }
+    .toTop-icon:hover ~ .goto-top
+    {
+        display: none;
+    }
+    .toTop
+    {
+        right: 18px;
+        top: 123px;
+    }
+
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em)
+{
+    .ourteam-avatar img
+    {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+    }
 }
