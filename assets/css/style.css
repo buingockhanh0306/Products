@@ -368,6 +368,7 @@ html{
 }
 .pricing-item:hover
 {
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 
 }
 .pricing-title{
@@ -430,4 +431,39 @@ html{
 }
 .bgr{
     background-color: #666;
+}
+
+.contact
+{
+    background-color: #f0f0f0;
+    padding: 64px 16px;
+    margin: 0;
+}
+.contact-title
+{
+    display: inline-block;
+    font-size: 2.4rem;
+    border-bottom: 6px solid #009688;
+    font-weight: 400;
+
+}
+.contact-add
+{
+    font-size: 2.4rem;
+    margin-top: 20px;
+}
+.swing
+{
+    font-size: 1.5rem;
+    margin: 16px 0;
+}
+.contact-item
+{
+    font-size: 1.5rem;
+}
+.contact-item i{
+    color: #009688;
+    font-size: 1.8rem;
+    width: 30px;
+    line-height: 1.8;
 }
